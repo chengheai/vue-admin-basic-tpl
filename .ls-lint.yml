@@ -1,0 +1,24 @@
+# https://ls-lint.org/1.x/configuration/the-basics.html#linting-directory-names
+ls:
+  src/views/*:
+    .js: camelCase | PascalCase
+    .vue: camelCase | PascalCase | regex:^index
+    .css: kebab-case
+    .scss: kebab-case
+
+  src/**/components:
+    .vue: PascalCase | regex:^index
+
+  src/{utils,constants,store,router,plugins}/*:
+    .js: camelCase
+
+ignore:
+  - node_modules
+  - .git
+  - .circleci
+  - .github
+  - .vscode
+  - dist
+  - pre
+  - .local
+  - .history
