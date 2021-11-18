@@ -19,6 +19,22 @@
       "path": "node_modules/cz-customizable"
     }
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "ls-lint && lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,vue}": [
+      "eslint --fix",
+      "git add"
+    ],
+    "src/**/*.{scss,css,vue}": [
+      "npm run lint:stylelint -- --fix",
+      "git add"
+    ]
+  },
   "dependencies": {
     "axios": "0.18.1",
     "dayjs": "^1.8.16",
