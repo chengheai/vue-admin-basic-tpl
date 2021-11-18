@@ -3,4 +3,5 @@ src/icons
 public
 dist
 pre
+/src/styles/variables.scss
 .history
