@@ -3,7 +3,7 @@
   .main-container {
     position: relative;
     min-height: 100%;
-    margin-left: $side-bar-width;
+    margin-left: $sideBarWidth;
     transition: margin-left .28s;
   }
 
@@ -13,11 +13,11 @@
     bottom: 0;
     left: 0;
     z-index: 1001;
-    width: $side-bar-width !important;
+    width: $sideBarWidth !important;
     height: 100%;
     overflow: hidden;
     font-size: 0;
-    background-color: $menu-bg;
+    background-color: $menuBg;
     transition: width 0.28s;
 
     // reset element-ui css
@@ -72,21 +72,21 @@
     .sub-menu-title-no-dropdown,
     .el-sub-menu__title {
       &:hover {
-        background-color: $menu-hover !important;
+        background-color: $menuHover !important;
       }
     }
 
     .is-active>.el-sub-menu__title {
-      color: $sub-menu-active-text !important;
+      color: $sub-menuActiveText !important;
     }
 
     & .nest-menu .el-sub-menu>.el-sub-menu__title,
     & .el-sub-menu .el-menu-item {
-      min-width: $side-bar-width !important;
-      background-color: $sub-menu-bg !important;
+      min-width: $sideBarWidth !important;
+      background-color: $subMenuBg !important;
 
       &:hover {
-        background-color: $sub-menu-hover !important;
+        background-color: $subMenuHover !important;
       }
     }
   }
@@ -153,7 +153,7 @@
   }
 
   .el-menu--collapse .el-menu .el-sub-menu {
-    min-width: $side-bar-width !important;
+    min-width: $sideBarWidth !important;
   }
 
   // mobile responsive
@@ -163,14 +163,14 @@
     }
 
     .sidebar-container {
-      width: $side-bar-width !important;
+      width: $sideBarWidth !important;
       transition: transform .28s;
     }
 
     &.hide-sidebar {
       .sidebar-container {
         pointer-events: none;
-        transform: translate3d(-$side-bar-width, 0, 0);
+        transform: translate3d(-$sideBarWidth, 0, 0);
         transition-duration: 0.3s;
       }
     }
@@ -201,8 +201,8 @@
   .nest-menu .el-sub-menu>.el-sub-menu__title,
   .el-menu-item {
     &:hover {
-      // you can use $sub-menu-hover
-      background-color: $menu-hover !important;
+      // you can use $subMenuHover
+      background-color: $menuHover !important;
     }
   }
 
